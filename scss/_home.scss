@@ -236,6 +236,9 @@
     .cure-slider{
         margin-top: 1em;
         position: relative;
+        .swiper{
+            padding: 2rem .25rem;
+        }
     }
     .swiper-nav{
         @include responsive(md){
