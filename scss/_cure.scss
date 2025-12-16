@@ -53,7 +53,7 @@
             }
             a{
                 text-decoration: none;
-                color: $darkBlue;
+                color: var(--vh-global-color-palette-2);
             }
         }
         .price{
@@ -63,7 +63,7 @@
             align-items: center;
             width: 100%;
             padding: .5rem 1rem;
-            background-color: $darkBlue;
+            background-color: var(--vh-global-color-palette-2);
             color: #FFF;
             @include responsive(sm){
                 padding: .5rem;

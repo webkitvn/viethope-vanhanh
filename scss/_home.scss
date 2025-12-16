@@ -34,7 +34,7 @@
             .text-box{
                 padding: 20vh 0;
                 width: 40vw;
-                color: $darkBlue;
+                color: var(--vh-global-color-palette-2);
                 @include responsive(md){
                     padding: 10vh 0 15vh;
                     width: 100%;
@@ -68,12 +68,12 @@
         .swiper-btn{
             background: none;
             border: 0;
-            color: $lightBlue;
+            color: var(--vh-global-color-palette-1);
         }
     }
     .swiper-pagination{
         .swiper-pagination-bullet{
-            background-color: $darkBlue;
+            background-color: var(--vh-global-color-palette-2);
         }
     }
     &:hover{
@@ -103,16 +103,16 @@
                 width: 50%;
             }
             &:not(:last-child){
-                border-right: 1px solid $darkBlue;
+                border-right: 1px solid var(--vh-global-color-palette-2);
             }
             span{
                 display: block;
                 &:first-of-type{
-                    color: $darkBlue;
+                    color: var(--vh-global-color-palette-2);
                     font-weight: bold;
                 }
                 &:last-of-type{
-                    color: $lightBlue;
+                    color: var(--vh-global-color-palette-1);
                     font-size: 2em;
                     font-weight: bold;
                     line-height: 1;
@@ -138,7 +138,7 @@
             display: block;
         }
         .content-box{
-            background-color: $lightBlue;
+            background-color: var(--vh-global-color-palette-1);
             color: #FFF;
             transform: translateY(-80px);
             z-index: 100;
@@ -155,7 +155,7 @@
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: $darkBlue;
+                background-color: var(--vh-global-color-palette-2);
                 padding: 20px;
                 @include responsive(md){
                     justify-content: flex-start;
@@ -220,7 +220,7 @@
                 span{
                     font-weight: bold;
                     font-size: 1em;
-                    color: $darkBlue;
+                    color: var(--vh-global-color-palette-2);
                     display: block;
                     margin-top: 20px;
                     @include responsive(sm){
@@ -242,7 +242,7 @@
             display: none;
         }
         .swiper-btn{
-            background-color: $lightBlue;
+            background-color: var(--vh-global-color-palette-1);
             color: #FFF;
             display: flex;
             width: 50px;
@@ -290,7 +290,7 @@
             display: block;
         }
         .swiper-pagination-bullet{
-            background-color: $darkBlue;
+            background-color: var(--vh-global-color-palette-2);
         }
     }
 }
@@ -334,12 +334,12 @@
     .swiper-pagination{
         bottom: 0;
         .swiper-pagination-bullet{
-            background-color: $darkBlue;
+            background-color: var(--vh-global-color-palette-2);
         }
     }
 }
 #tintuc{
-    background-color: $gray;
+    background-color: var(--vh-color-gray);
     padding: 2em 0;
     .tabs-wrapper{
         .tabs{
@@ -362,7 +362,7 @@
                 }
                 &:hover, &.active{
                     a{
-                        color: $darkBlue;
+                        color: var(--vh-global-color-palette-2);
                     }
                 }
             }
@@ -449,18 +449,18 @@
             display: block;
         }
         .swiper-pagination-bullet{
-            background-color: $darkBlue;
+            background-color: var(--vh-global-color-palette-2);
         }
     }
 }
 #videos{
     padding: 2em 0;
-    background-color: $gray;
+    background-color: var(--vh-color-gray);
     .section-content{
         display: flex;
         flex-wrap: wrap;
         h3{
-            color: $darkBlue;
+            color: var(--vh-global-color-palette-2);
             font-weight: bold;
             font-size: 1.3em;
             margin-bottom: 20px;
@@ -476,7 +476,7 @@
         }
         .left-content{
             padding-right: 30px;
-            border-right: 1px solid $lightBlue;
+            border-right: 1px solid var(--vh-global-color-palette-1);
             @include responsive(sm){
                 padding: 0;
                 border: 0;
@@ -517,9 +517,9 @@
     padding: 2em 0;
     .reviews{
         .review{
-            border: 1px solid $lightBlue;
+            border: 1px solid var(--vh-global-color-palette-1);
             padding: 20px;
-            color: $darkBlue;
+            color: var(--vh-global-color-palette-2);
             text-align: center;
             border-radius: 10px;
             opacity: .3;
@@ -568,7 +568,7 @@
         margin: 20px auto 0;
         transform: none;
         .swiper-pagination-bullet{
-            background-color: $darkBlue;
+            background-color: var(--vh-global-color-palette-2);
             bottom: 0;
         }
     }

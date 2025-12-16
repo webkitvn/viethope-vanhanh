@@ -88,7 +88,7 @@
         }
 
         &:nth-child(odd) {
-            background-color: $gray;
+            background-color: var(--vh-color-gray);
         }
     }
 }
@@ -145,7 +145,7 @@
             justify-content: space-between;
             margin: 0;
             list-style: none;
-            background-color: $darkBlue;
+            background-color: var(--vh-global-color-palette-2);
             padding: 20px 30px;
             border-radius: 0 0 10px 10px;
 
@@ -229,7 +229,7 @@
                 font-weight: 600;
 
                 a {
-                    color: $darkBlue;
+                    color: var(--vh-global-color-palette-2);
                     text-decoration: none;
                 }
             }
@@ -272,18 +272,18 @@
                 transition: background-color .3s ease-in-out;
 
                 &:first-child {
-                    background-color: $darkBlue;
+                    background-color: var(--vh-global-color-palette-2);
 
                     &:hover {
-                        background-color: darken($darkBlue, 10%);
+                        background-color: var(--vh-global-color-palette-2-darken-10);
                     }
                 }
 
                 &:last-child {
-                    background-color: $lightBlue;
+                    background-color: var(--vh-global-color-palette-1);
 
                     &:hover {
-                        background-color: darken($lightBlue, 10%);
+                        background-color: var(--vh-global-color-palette-1-darken-10);
                     }
                 }
 

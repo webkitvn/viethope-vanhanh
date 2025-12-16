@@ -3,7 +3,7 @@
     background-color: #FFF;
     position: relative;
     @include responsive(md){
-        border-bottom: 1px solid $gray;
+        border-bottom: 1px solid var(--vh-color-gray);
     }
     .header-inner{
         display: flex;
@@ -75,13 +75,13 @@
                             text-align: center;
                         }
                         &:first-of-type{
-                            background-color: $lightBlue;
+                            background-color: var(--vh-global-color-palette-1);
                             border-radius: 0 0 0 20px;
                             font-weight: bold;
                             padding-left: 30px;
                         }
                         &:last-of-type{
-                            background-color: $darkBlue;
+                            background-color: var(--vh-global-color-palette-2);
                             @include responsive(md){
                                 border-radius: 0 0 20px 0;
                             }
@@ -96,7 +96,7 @@
                                 position: absolute;
                                 left: 100%;
                                 top: 0;
-                                background-color: $darkBlue;
+                                background-color: var(--vh-global-color-palette-2);
                                 @include responsive(md){
                                     content: none;
                                 }
@@ -115,7 +115,7 @@
                     left: 0;
                     height: 100vh;
                     width: 300px;
-                    background-color: $lightBlue;
+                    background-color: var(--vh-global-color-palette-1);
                     z-index: 999;
                     margin: 0;
                     transform: translateX(-105%);
@@ -133,7 +133,7 @@
                     li{
                         position: relative;
                         a{
-                            color: $lightBlue;
+                            color: var(--vh-global-color-palette-1);
                             text-decoration: none;
                             transition: all .3s ease;
                         }
@@ -176,12 +176,12 @@
                         &.current-menu-item{
                             > a{
                                 font-weight: bold;
-                                color: $darkBlue;
+                                color: var(--vh-global-color-palette-2);
                             }
                         }
                         &:hover{
                             > a{
-                                color: $darkBlue;
+                                color: var(--vh-global-color-palette-2);
                             }
                             .sub-menu{
                                 opacity: 1;
@@ -194,7 +194,7 @@
                         position: absolute;
                         top: 100%;
                         left: 0;
-                        background-color: $darkBlue;
+                        background-color: var(--vh-global-color-palette-2);
                         margin: 0;
                         padding: 0;
                         list-style: none;
@@ -211,7 +211,7 @@
                                 color: #FFF;
                                 display: block;
                                 &:hover{
-                                    background-color: darken($darkBlue, 5%);
+                                    background-color: var(--vh-global-color-palette-2-darken-5);
                                 }
                             }
                             &:not(:last-child){
@@ -219,12 +219,12 @@
                             }
                             &:first-of-type{
                                 a{
-                                    border-radius: $br $br 0 0;
+                                    border-radius: var(--vh-radius-base) var(--vh-radius-base) 0 0;
                                 }
                             }
                             &:last-of-type{
                                 a{
-                                    border-radius: 0 0 $br $br;
+                                    border-radius: 0 0 var(--vh-radius-base) var(--vh-radius-base);
                                 }
                             }
                         }
@@ -240,7 +240,7 @@
                         svg{
                             width: 30px;
                             height: auto;
-                            fill: $lightBlue;
+                            fill: var(--vh-global-color-palette-1);
                         }
                     }
                     .search-form{
@@ -272,7 +272,7 @@
                                 svg{
                                     width: 24px;
                                     height: auto;
-                                    stroke: $lightBlue;
+                                    stroke: var(--vh-global-color-palette-1);
                                 }
                             }
                         }
@@ -316,12 +316,12 @@
             height: 2px;
             position: absolute;
             right: 0;
-            background: $darkBlue;
+            background: var(--vh-global-color-palette-2);
             -webkit-transition: all 0.3s ease;
             transition: all 0.3s ease;
 
             @include responsive(sm) {
-                background-color: $darkBlue;
+                background-color: var(--vh-global-color-palette-2);
             }
 
             &:nth-child(1) {
@@ -372,7 +372,7 @@
     width: 300px;
     height: 100vh;
     overflow-y: auto;
-    background-color: $lightBlue;
+    background-color: var(--vh-global-color-palette-1);
     z-index: 999;
     transform: translateX(-105%);
     transition: all .3s ease-in-out;
@@ -409,14 +409,14 @@
         .current-menu-item{
             > a{
                 background-color: #FFF;
-                color: $darkBlue !important;
+                color: var(--vh-global-color-palette-2) !important;
                 &::before{
-                    background-color: $darkBlue !important;
+                    background-color: var(--vh-global-color-palette-2) !important;
                 }
             }
         }
         .sub-menu{
-            background-color: darken($lightBlue, 5%);
+            background-color: var(--vh-global-color-palette-1-darken-5);
             margin: 0;
             padding: 0;
             list-style: none;
@@ -473,7 +473,7 @@
                 svg{
                     width: 24px;
                     height: auto;
-                    stroke: $lightBlue;
+                    stroke: var(--vh-global-color-palette-1);
                 }
             }
         }

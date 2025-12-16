@@ -20,7 +20,7 @@
             font-size: 2.5em;
             text-transform: uppercase;
             font-weight: bold;
-            color: $darkBlue;
+            color: var(--vh-global-color-palette-2);
             @include responsive(md){
                 font-size: 1.3em;
             }
@@ -99,7 +99,7 @@
                 color: rgb(119, 119, 119);
                 text-decoration: none;
                 &:hover{
-                    color: $darkBlue;
+                    color: var(--vh-global-color-palette-2);
                 }
             }
             .separator{
@@ -113,7 +113,7 @@
                 color: rgb(119, 119, 119);
                 text-decoration: none;
                 &:hover{
-                    color: $darkBlue;
+                    color: var(--vh-global-color-palette-2);
                 }
             }
             span{
@@ -134,7 +134,7 @@
         margin-bottom: 20px;
         h2{
             font-size: 2em;
-            color: $darkBlue;
+            color: var(--vh-global-color-palette-2);
             font-weight: bold;
             @include responsive(md){
                 font-size: 1.5em;
@@ -145,7 +145,7 @@
         }
         h1{
             font-size: 2.5em;
-            color: $darkBlue;
+            color: var(--vh-global-color-palette-2);
             font-weight: bold;
             @include responsive(md){
                 font-size: 2em;
@@ -203,7 +203,7 @@
             }
             .item{
                 position: relative;
-                background-color: $gray;
+                background-color: var(--vh-color-gray);
                 border-radius: 10px;
                 padding: 80px 20px 20px;
                 .icon{
@@ -213,7 +213,7 @@
                     align-items: center;
                     justify-content: center;
                     border-radius: 10px;
-                    background-color: $darkBlue;
+                    background-color: var(--vh-global-color-palette-2);
                     position: absolute;
                     top: -50px;
                     left: 50%;
@@ -228,7 +228,7 @@
                     h3{
                         font-size: 1.5em;
                         font-weight: bold;
-                        color: $darkBlue;
+                        color: var(--vh-global-color-palette-2);
                     }
                 }
             }
@@ -259,7 +259,7 @@
             }
         }
         .contact-info{
-            background-color: $darkBlue;
+            background-color: var(--vh-global-color-palette-2);
             color: #FFF;
             padding: 30px;
             position: absolute;
@@ -321,7 +321,7 @@
         h2 {
             font-size: 1.5em;
             font-weight: bold;
-            color: $darkBlue;
+            color: var(--vh-global-color-palette-2);
             margin-bottom: 1em;
 
             span {
@@ -342,7 +342,7 @@
         .title {
             font-size: 1.5em;
             font-weight: bold;
-            color: $darkBlue;
+            color: var(--vh-global-color-palette-2);
             margin-bottom: 1em;
         }
 
@@ -368,7 +368,7 @@
                 text-align: center;
                 line-height: 1;
                 margin: 0 auto;
-                border: 1px solid $darkBlue;
+                border: 1px solid var(--vh-global-color-palette-2);
                 position: relative;
 
                 &::before {
@@ -376,7 +376,7 @@
                     display: block;
                     width: 90%;
                     height: 90%;
-                    background: $darkBlue;
+                    background: var(--vh-global-color-palette-2);
                     border-radius: 50%;
                     position: absolute;
                     top: 50%;
@@ -417,7 +417,7 @@
             h2 {
                 font-size: 2em;
                 font-weight: bold;
-                color: $darkBlue;
+                color: var(--vh-global-color-palette-2);
                 margin-bottom: 1em;
                 text-transform: uppercase;
 

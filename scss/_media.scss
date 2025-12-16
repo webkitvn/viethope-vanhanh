@@ -1,6 +1,6 @@
 .media{
     .item{
-        color: $darkBlue;
+        color: var(--vh-global-color-palette-2);
         text-decoration: none;
         .thumb{
             margin-bottom: 20px;
@@ -38,7 +38,7 @@
             text-overflow: ellipsis;
             width: 100%;
             a{
-                color: $darkBlue;
+                color: var(--vh-global-color-palette-2);
                 text-decoration: none;
             }
         }
@@ -46,7 +46,7 @@
 }
 .videos{
     .video{
-        color: $darkBlue;
+        color: var(--vh-global-color-palette-2);
         text-decoration: none;
         .thumb{
             margin-bottom: 20px;

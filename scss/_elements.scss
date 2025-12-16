@@ -14,7 +14,7 @@
     transition: all .3s ease;
     text-decoration: none;
     &:hover{
-        border-color: $darkBlue;
+        border-color: var(--vh-global-color-palette-2);
         color: #FFF;
     }
     &::after{
@@ -25,18 +25,18 @@
         right: 2px;
         bottom: 2px;
         left: 2px;
-        background-color: $darkBlue;
+        background-color: var(--vh-global-color-palette-2);
         z-index: -1;
         border-radius: 40px;
     }
     &.btn-white{
-        color: $lightBlue;
+        color: var(--vh-global-color-palette-1);
         &::after{
             background-color: #FFF;
         }
         &:hover{
             border-color: #FFF;
-            color: $darkBlue;
+            color: var(--vh-global-color-palette-2);
         }
     }
     &::before{
@@ -68,7 +68,7 @@
             display: none;
         }
         .swiper-btn{
-            background-color: $lightBlue;
+            background-color: var(--vh-global-color-palette-1);
             color: #FFF;
             display: flex;
             width: 50px;
@@ -116,7 +116,7 @@
             display: block;
         }
         .swiper-pagination-bullet{
-            background-color: $darkBlue;
+            background-color: var(--vh-global-color-palette-2);
         }
     }
 }
@@ -131,14 +131,14 @@
         justify-content: center;
         width: 30px;
         height: 30px;
-        border: 1px solid $darkBlue;
+        border: 1px solid var(--vh-global-color-palette-2);
         margin: 3px;
         text-decoration: none;
-        color: $darkBlue;
+        color: var(--vh-global-color-palette-2);
         font-size: .9em;
         border-radius: 3px;
         &:hover, &.current{
-            background-color: $darkBlue;
+            background-color: var(--vh-global-color-palette-2);
             color: #FFF;
         }
     }

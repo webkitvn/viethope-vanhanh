@@ -23,13 +23,13 @@
     &::before {
         top: 0;
         left: 0;
-        background-color: $darkBlue;
+        background-color: var(--vh-global-color-palette-2);
     }
 
     &::after {
         right: 0;
         top: 0;
-        background-color: $lightBlue;
+        background-color: var(--vh-global-color-palette-1);
     }
 
     .wrapper {
@@ -63,7 +63,7 @@
             padding-right: 30px;
 
             @include responsive(md) {
-                background-color: $darkBlue;
+                background-color: var(--vh-global-color-palette-2);
                 padding: 2em 15px;
             }
 
@@ -92,7 +92,7 @@
                     text-decoration: none;
 
                     &:hover {
-                        color: $lightBlue;
+                        color: var(--vh-global-color-palette-1);
                     }
                 }
 
@@ -142,7 +142,7 @@
                                 text-decoration: none;
 
                                 &:hover {
-                                    color: $lightBlue;
+                                    color: var(--vh-global-color-palette-1);
                                 }
                             }
                         }
@@ -180,7 +180,7 @@
             padding-left: 60px;
 
             @include responsive(md) {
-                background-color: $lightBlue;
+                background-color: var(--vh-global-color-palette-1);
                 padding: 2em 15px;
             }
 
@@ -224,7 +224,7 @@
     .form-title {
         padding: 10px 20px;
         text-align: center;
-        background-color: $darkBlue;
+        background-color: var(--vh-global-color-palette-2);
         color: #FFF;
         text-transform: uppercase;
         font-weight: bold;
@@ -286,7 +286,7 @@
             background-size: 1em;
         }
         label {
-            color: $darkBlue;
+            color: var(--vh-global-color-palette-2);
         }
 
         .step {
@@ -294,7 +294,7 @@
                 margin-bottom: 1em;
             }
             .step-title {
-                color: $darkBlue;
+                color: var(--vh-global-color-palette-2);
                 text-transform: uppercase;
                 margin-bottom: .5em;
                 font-size: 1em;
@@ -311,16 +311,16 @@
                     align-items: center;
                     justify-content: center;
                     width: 200px;
-                    border: 1px solid $darkBlue;
+                    border: 1px solid var(--vh-global-color-palette-2);
                     border-radius: 20px;
-                    color: $darkBlue;
+                    color: var(--vh-global-color-palette-2);
                     text-transform: uppercase;
                     font-weight: bold;
                     font-size: .9em;
                     text-decoration: none;
                     padding: .5em 1em;
                     &.active {
-                        background-color: $darkBlue;
+                        background-color: var(--vh-global-color-palette-2);
                         color: #FFF;
                     }
                 }

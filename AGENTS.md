@@ -1,3 +1,4 @@
+use `rg` (ripgrep) command for speed search in the project.
 <!-- OPENSPEC:START -->
 # OpenSpec Instructions
 

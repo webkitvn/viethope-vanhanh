@@ -1,6 +1,6 @@
 .posts{
     .post{
-        color: $darkBlue;
+        color: var(--vh-global-color-palette-2);
         text-decoration: none;
         display: flex;
         flex-wrap: wrap;
@@ -55,7 +55,7 @@
         }
         &:hover{
             .title{
-                color: $lightBlue;
+                color: var(--vh-global-color-palette-1);
             }
         }
     }

@@ -40,6 +40,7 @@ case $COMMAND in
     "build"|"production")
         print_status "Building SCSS in production mode (minified)..."
         sass scss/custom.scss:css/custom.css --style=compressed
+        rm -f css/custom.css.map
         print_status "Production build completed!"
         ;;
     "watch")
