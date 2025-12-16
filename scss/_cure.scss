@@ -1,0 +1,104 @@
+.cures{
+    .cure{
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: #FFF;
+        transition: box-shadow 0.3s ease;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        &:hover{
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .cure-thumb{
+            display: block;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            border-radius: 0;
+            &.thumb-21{
+                aspect-ratio: 73/55;
+            }
+            .img-holder{
+                height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                }
+            }
+        }
+        .info-box{
+            margin-top: auto;
+            display: flex;
+            flex-direction: column;
+            background-color: #FFF;
+            p{
+                padding: 0 1rem;
+            }
+        }
+        .cure-title{
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1rem;
+            margin: 0;
+            padding: 1rem;
+            @include responsive(md){
+                font-size: 1em;
+            }
+            @include responsive(sm){
+                font-size: .9rem;
+                padding: .5rem;
+            }
+            a{
+                text-decoration: none;
+                color: $darkBlue;
+            }
+        }
+        .price{
+            margin-top: auto;
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            width: 100%;
+            padding: .5rem 1rem;
+            background-color: $darkBlue;
+            color: #FFF;
+            @include responsive(sm){
+                padding: .5rem;
+            }
+            .price-value{
+                font-size: 1.2em;
+                font-weight: bold;
+                @include responsive(sm){
+                    font-size: .9rem;
+                }
+            }
+        }
+        p{
+            font-size: .9em;
+            color: #444;
+            display: -webkit-box;
+            line-clamp: 2;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            @include responsive(md){
+                line-height: 1.2;
+            }
+        }
+    }
+    &.cures-grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        @include responsive(md){
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+        @include responsive(sm){
+            grid-gap: 10px;
+        }
+    }
+}

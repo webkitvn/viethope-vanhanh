@@ -1,0 +1,145 @@
+.text-center{
+    text-align: center;
+}
+.custom-btn{
+    display: block;
+    width: fit-content;
+    position: relative;
+    padding: 15px 30px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: #FFF;
+    font-size: .9em;
+    border-radius: 40px;
+    transition: all .3s ease;
+    text-decoration: none;
+    &:hover{
+        border-color: $darkBlue;
+        color: #FFF;
+    }
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        bottom: 2px;
+        left: 2px;
+        background-color: $darkBlue;
+        z-index: -1;
+        border-radius: 40px;
+    }
+    &.btn-white{
+        color: $lightBlue;
+        &::after{
+            background-color: #FFF;
+        }
+        &:hover{
+            border-color: #FFF;
+            color: $darkBlue;
+        }
+    }
+    &::before{
+        content: "";
+        display: none;
+        width: 30px;
+        height: 30px;
+        background: url(../img/spinter.svg) no-repeat center;
+        background-size: 100%;
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+    }
+    &.sending{
+        &::before{
+            display: block;
+        }
+    }
+    span{
+        position: relative;
+        z-index: 10;
+    }
+}
+.swiper-slider{
+    position: relative;
+    .swiper-nav{
+        @include responsive(md){
+            display: none;
+        }
+        .swiper-btn{
+            background-color: $lightBlue;
+            color: #FFF;
+            display: flex;
+            width: 50px;
+            height: 50px;
+            border: 0;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: .5;
+            transition: opacity .3s ease;
+            &:hover{
+                opacity: 1;
+            }
+            &::after{
+                font-size: 1.5em;
+                font-family: swiper-icons;
+                text-transform: none!important;
+                letter-spacing: 0;
+                text-transform: none;
+                font-variant: initial;
+                line-height: 1;
+            }
+            &.swiper-button-next{
+                right: -60px;
+                &::after{
+                    content: 'next';
+                }
+                
+            }
+            &.swiper-button-prev{
+                left: -60px;
+                &::after{
+                    content: 'prev';
+                }
+            }
+        }
+    }
+    .swiper-pagination{
+        position: static;
+        transform: none;
+        margin: 10px auto 0;
+        display: none;
+        @include responsive(md){
+            display: block;
+        }
+        .swiper-pagination-bullet{
+            background-color: $darkBlue;
+        }
+    }
+}
+.wp-pagenavi{
+    padding: 2em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    a, span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border: 1px solid $darkBlue;
+        margin: 3px;
+        text-decoration: none;
+        color: $darkBlue;
+        font-size: .9em;
+        border-radius: 3px;
+        &:hover, &.current{
+            background-color: $darkBlue;
+            color: #FFF;
+        }
+    }
+}

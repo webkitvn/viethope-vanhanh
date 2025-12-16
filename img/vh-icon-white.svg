@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.69 59.31">
+    <defs>
+        <linearGradient id="prefix__a" x1="21.17" y1="39.68" x2="61.07" y2="39.68" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#fff" />
+            <stop offset="1" stop-color="#fff" />
+        </linearGradient>
+    </defs>
+    <g data-name="Layer 2">
+        <g data-name="Layer 3">
+            <path
+                d="M40.17 4v14.26H28.45A9.72 9.72 0 0018.74 28v11.24H4.08a4.06 4.06 0 01-4.08-4V24a4.07 4.07 0 014.08-4h16.45V4a4.05 4.05 0 011.2-2.84A4.17 4.17 0 0124.62 0h11.45A4.23 4.23 0 0139 1.16 4.05 4.05 0 0140.17 4"
+                fill-rule="evenodd" fill="#fff" />
+            <path
+                d="M60.69 24v11.2a4.06 4.06 0 01-4.09 4H40.16c0-12.82 7.47-17.35 16.68-19.19a4.06 4.06 0 013.84 3.82V24"
+                fill="#fff" fill-rule="evenodd" />
+            <path
+                d="M29.45 20.05c-6.27 0-8.92 3.87-8.92 9.82v25.44a4.06 4.06 0 004.09 4h11.45a4.06 4.06 0 004.09-4V39.24c0-12.81 7.47-17.34 16.69-19.18h-27.4z"
+                fill="url(#prefix__a)" />
+        </g>
+    </g>
+</svg>

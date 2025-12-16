@@ -1,0 +1,122 @@
+.posts{
+    .post{
+        color: $darkBlue;
+        text-decoration: none;
+        display: flex;
+        flex-wrap: wrap;
+        .title{
+            font-size: 1.2em;
+            font-weight: 600;
+            line-height: 1.3em;
+            max-height: 2.6em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            @include responsive(md){
+                font-size: 1em;
+                text-align: left;
+                margin-bottom: 5px;
+            }
+        }
+        p{
+            color: #000;
+            font-size: .9em;
+            @include responsive(md){
+                text-align: left;
+                line-height: 1.3;
+            }
+        }
+        .thumb{
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            .date{
+                position: absolute;
+                top: 0;
+                left: 0;
+                text-align: center;
+                background: rgb(0,171,207);
+                background: linear-gradient(90deg, rgba(0,171,207,1) 0%, rgba(15,76,148,1) 100%);
+                color: #FFF;
+                z-index: 100;
+                padding: 10px 15px;
+                line-height: 1;
+                span{
+                    display: block;
+                    font-size: 13px;
+                    &:last-of-type{
+                        font-size: 18px;
+                        font-weight: bold;
+                        margin-top: 3px;
+                    }
+                }
+            }
+        }
+        &:hover{
+            .title{
+                color: $lightBlue;
+            }
+        }
+    }
+    &.posts-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 30px;
+        @include responsive(md){
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+        }
+        @include responsive(sm){
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+    }
+}
+.single{
+    .entry-content{
+        max-width: 1000px;
+        margin: 0 auto;
+        img{
+            max-width: 100%;
+            height: auto;
+            margin: 10px 0;
+            &.aligncenter{
+                display: block;
+                margin: 0 auto 10px;
+            }
+            &.alignleft{
+                float: left;
+                margin: 0 10px 10px 0;
+            }
+            &.alignright{
+                float: right;
+                margin: 0 0 10px 10px;
+            }
+        }
+        figure{
+            max-width: 100% !important;
+            &.aligncenter{
+                display: block;
+                margin: 0 auto 10px;
+            }
+            &.alignleft{
+                float: left;
+                margin: 0 10px 10px 0;
+            }
+            &.alignright{
+                float: right;
+                margin: 0 0 10px 10px;
+            }
+            img{
+                margin: 0 !important;
+            }
+            figcaption{
+                display: block;
+                padding: .3em;
+                font-size: .9em;
+                background-color: #f7f8f9;
+            }
+        }
+    }
+}

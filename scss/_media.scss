@@ -1,0 +1,100 @@
+.media{
+    .item{
+        color: $darkBlue;
+        text-decoration: none;
+        .thumb{
+            margin-bottom: 20px;
+            .play{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 70px;
+                height: 70px;
+                color: #FFF;
+                cursor: pointer;
+                border-radius: 50%;
+                background-color: rgba(#000, .5);
+                z-index: 100;
+                transition: background-color .3s ease;
+                &:hover{
+                    background-color: rgba(#000, .7);
+                }
+                svg{
+                    width: 20px;
+                    height: auto;
+                }
+            }
+        }
+        .title{
+            font-size: 1.2em;
+            font-weight: 600;
+            line-height: 1.3em;
+            max-height: 2.6em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            a{
+                color: $darkBlue;
+                text-decoration: none;
+            }
+        }
+    }
+}
+.videos{
+    .video{
+        color: $darkBlue;
+        text-decoration: none;
+        .thumb{
+            margin-bottom: 20px;
+            @include responsive(sm){
+                margin-bottom: 10px;
+            }
+            .play{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 70px;
+                height: 70px;
+                color: #FFF;
+                border-radius: 50%;
+                background-color: rgba(#000, .5);
+                z-index: 100;
+                transition: background-color .3s ease;
+                &:hover{
+                    background-color: rgba(#000, .7);
+                }
+                svg{
+                    width: 20px;    
+                    height: auto;
+                }
+            }
+        }
+        .title{
+            display: block;
+            font-weight: 600;
+            font-size: 1.2em;
+            font-weight: 600;
+            line-height: 1.3em;
+            max-height: 2.6em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+            @include responsive(sm){
+                font-size: 1em;
+                line-height: 1.2;
+                max-height: none;
+            }
+        }
+    }
+}
+#reviews{
+    padding: 2em 0;
+}

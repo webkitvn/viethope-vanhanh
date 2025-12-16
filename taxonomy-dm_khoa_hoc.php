@@ -1,0 +1,1 @@
+<?php get_template_part('archive-khoa_hoc') ?>
