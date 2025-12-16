@@ -1,0 +1,30 @@
+# Van Hanh Theme Security Rules
+# Chặn truy cập các file build và development
+
+# Chặn truy cập file shell scripts
+<FilesMatch "\.(sh|bash)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Chặn truy cập file build và config
+<FilesMatch "^(build\.sh|package\.json|pnpm-lock\.yaml|\.gitignore|README\.md|AGENTS\.md|CLAUDE\.md)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Chặn truy cập thư mục SCSS source files
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^scss/ - [F,L]
+    RewriteRule ^node_modules/ - [F,L]
+    RewriteRule ^openspec/ - [F,L]
+    RewriteRule ^\.(git|cursor|claude|factory|vscode|idea)/ - [F,L]
+</IfModule>
+
+# Chặn truy cập file sourcemap (nếu có)
+<FilesMatch "\.map$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+

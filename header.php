@@ -21,10 +21,8 @@
                     <?php 
                         $args = array(
                             'alt'=>get_bloginfo('name'),
-                            'width' => 300,
-                            'height' => 85
                         );
-                        echo wp_get_attachment_image($logo, 'full', false, $args);
+                        echo wp_get_attachment_image($logo, 'medium_large', false, $args);
                     ?>
                 </a>
                 <?php endif; ?>
