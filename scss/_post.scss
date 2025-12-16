@@ -36,8 +36,8 @@
                 top: 0;
                 left: 0;
                 text-align: center;
-                background: rgb(0,171,207);
-                background: linear-gradient(90deg, rgba(0,171,207,1) 0%, rgba(15,76,148,1) 100%);
+                background: var(--vh-global-color-palette-2);
+                background: linear-gradient(90deg, var(--vh-global-color-palette-2) 0%, var(--vh-global-color-palette-2-darken-10) 100%);
                 color: #FFF;
                 z-index: 100;
                 padding: 10px 15px;
