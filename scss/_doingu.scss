@@ -11,7 +11,7 @@
             width: 100%;
             padding: 4em 1em 2em;
             background: var(--vh-global-color-palette-2);
-            background: linear-gradient(180deg, var(--vh-global-color-palette-2) 0%, transparent 100%);
+            background: linear-gradient(180deg, transparent 0%, var(--vh-global-color-palette-2) 100%);
             color: #FFF;
             text-align: center;
             border-radius: 0 0 10px 10px;
