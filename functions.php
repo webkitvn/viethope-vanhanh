@@ -116,3 +116,10 @@ function wpdocs_excerpt_more( $more ) {
     return '...';
 }
 add_filter( 'excerpt_more', 'wpdocs_excerpt_more' );
+
+add_action( 'admin_head', function () {
+    $screen = get_current_screen();
+    if ( $screen && 'term' === $screen->base ) {
+        echo '<style>#edittag{max-width:1200px}</style>';
+    }
+} );
