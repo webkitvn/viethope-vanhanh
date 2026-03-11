@@ -1,3 +1,27 @@
+<?php
+$is_dm_chuyen_khoa_tax = is_tax( 'dm_chuyen_khoa' );
+$current_term          = $is_dm_chuyen_khoa_tax ? get_queried_object() : null;
+
+if ( $is_dm_chuyen_khoa_tax && $current_term instanceof WP_Term ) {
+    $page_title = single_term_title( '', false );
+} else {
+    $page_title = __( 'Chuyên khoa', 'vanhanh' );
+}
+
+$parent_term_id = 0;
+
+if ( $current_term instanceof WP_Term ) {
+    $parent_term_id = $current_term->term_id;
+}
+
+$terms = vh_get_dm_chuyen_khoa_terms( $parent_term_id );
+
+if ( $is_dm_chuyen_khoa_tax ) {
+    $section_description = term_description();
+} else {
+    $section_description = get_field( 'dmdieutri_content', 'option' );
+}
+?>
 <?php get_header() ?>
     <?php get_template_part('templates/content','page-header') ?>
     <div id="main-content">
@@ -7,14 +31,7 @@
                 <div class="wrapper">
                     <div class="section-title">
                         <h1 class="entry-title">
-                            <?php 
-                                if(is_tax('dm_chuyen_khoa')){
-                                    single_cat_title();
-                                }
-                                else{
-                                    _e("Chuyên khoa", "vanhanh");
-                                }
-                            ?>
+                            <?php echo esc_html( $page_title ); ?>
                         </h1>
                         <div class="icon">
                             <img src="<?php echo get_stylesheet_directory_uri() ?>/img/vh-icon.svg" alt="van hanh" loading="lazy" width="20" height="20">
@@ -22,47 +39,16 @@
                     </div>
                 </div>
             </div>
-            <?php 
-                if(is_tax('dm_chuyen_khoa')){
-                    $termID = get_queried_object()->term_id;
-                    $terms = get_terms(array(
-                        'taxonomy' => 'dm_chuyen_khoa',
-                        'hide_empty' => false,
-                        'parent' => $termID,
-                        'orderby' => 'menu_order'
-                    ));
-                }
-                else{
-                    $terms = get_terms(array(
-                        'taxonomy' => 'dm_chuyen_khoa',
-                        'hide_empty' => false,
-                        'parent' => 0,
-                        'orderby' => 'menu_order'
-                    ));
-                }
-            ?>
             <div class="section">
                 <div class="wrapper">
-                    <?php if($terms) : ?>
+                    <?php if ( ! empty( $terms ) ) : ?>
                     <div class="cures cures-grid dmdieutri">
-                        <?php 
-                            foreach($terms as $term) :
+                        <?php
+                        foreach ( $terms as $term ) :
+                            set_query_var( 'vh_chuyen_khoa_term', $term );
+                            get_template_part( 'templates/components/chuyen_khoa', 'card' );
+                        endforeach;
                         ?>
-                        <div class="cure">
-                            <a href="<?php echo get_term_link($term->term_id, 'dm_chuyen_khoa') ?>" class="cure-thumb thumb thumb-11">
-                                <div class="img-holder">
-                                    <?php 
-                                        $img = get_field('dmdt_image', $term);
-                                        echo wp_get_attachment_image($img, 'large', false, array());
-                                    ?>
-                                </div>
-                            </a>
-                            <div class="info-box">
-                                <h3 class="cure-title"><a href="<?php echo get_term_link($term->term_id, 'dm_chuyen_khoa') ?>"><?php echo $term->name ?></a></h3>
-                                <p><?php echo substr(strip_tags(term_description($term)), 0, 150) ?></p>
-                            </div>
-                        </div>
-                        <?php endforeach; ?>
                     </div>
                     <?php else : ?>
                         <div class="cures cures-grid">
@@ -81,12 +67,9 @@
                 <div class="wrapper">
                     <div class="section-des">
                         <?php 
-                            if(is_tax('dm_chuyen_khoa')){
-                                echo term_description();
-                            }
-                            else{
-                                the_field('dmdieutri_content', 'option');
-                            }
+                        if ( $section_description ) {
+                            echo $section_description;
+                        }
                         ?>
                     </div>
                 </div>

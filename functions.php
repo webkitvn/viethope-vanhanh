@@ -123,3 +123,66 @@ add_action( 'admin_head', function () {
         echo '<style>#edittag{max-width:1200px}</style>';
     }
 } );
+
+if ( ! function_exists( 'vh_get_dm_chuyen_khoa_terms' ) ) {
+    /**
+     * Get dm_chuyen_khoa terms for archive and taxonomy pages.
+     *
+     * @param int   $parent_term_id Parent term ID to filter by.
+     * @param array $args           Optional additional arguments for get_terms.
+     *
+     * @return array
+     */
+    function vh_get_dm_chuyen_khoa_terms( $parent_term_id = 0, $args = array() ) {
+        $defaults   = array(
+            'taxonomy'   => 'dm_chuyen_khoa',
+            'hide_empty' => false,
+            'parent'     => $parent_term_id,
+            'orderby'    => 'menu_order',
+        );
+        $query_args = wp_parse_args( $args, $defaults );
+        $terms      = get_terms( $query_args );
+
+        if ( is_wp_error( $terms ) ) {
+            return array();
+        }
+
+        return $terms;
+    }
+}
+
+if ( ! function_exists( 'vh_get_term_excerpt' ) ) {
+    /**
+     * Build a short excerpt from a term description.
+     *
+     * @param WP_Term $term   Term object.
+     * @param int     $length Maximum length in characters.
+     *
+     * @return string
+     */
+    function vh_get_term_excerpt( $term, $length = 150 ) {
+        if ( ! ( $term instanceof WP_Term ) ) {
+            return '';
+        }
+
+        $description = term_description( $term );
+
+        if ( '' === $description ) {
+            return '';
+        }
+
+        $text = wp_strip_all_tags( $description );
+
+        if ( function_exists( 'mb_substr' ) ) {
+            $excerpt = mb_substr( $text, 0, $length );
+        } else {
+            $excerpt = substr( $text, 0, $length );
+        }
+
+        if ( strlen( $text ) > $length ) {
+            $excerpt .= '...';
+        }
+
+        return $excerpt;
+    }
+}
