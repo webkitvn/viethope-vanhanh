@@ -40,6 +40,9 @@
             ));
             if($query->have_posts()) :
         ?>
+        <?php 
+            get_template_part('templates/components/doingu_bacsi');
+        ?>
         <div class="page-features section pt-4">
             <div class="wrapper">
                 <section class="section-title">

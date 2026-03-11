@@ -175,6 +175,34 @@
         },
     });
 
+    const doingubsCarousel = new Swiper('.doingubs-carousel .swiper', {
+        loop: true,
+        autoplay: {
+            delay: 9000,
+        },
+        slidesPerView: 2,
+        spaceBetween: 15,
+        grabCursor: true,
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+            }
+        },
+        navigation: {
+            nextEl: ".doingubs-carousel .swiper-button-next",
+            prevEl: ".doingubs-carousel .swiper-button-prev",
+        },
+        pagination: {
+            el: ".doingubs-carousel .swiper-pagination",
+            clickable: true,
+        }
+    });
+
     const coursesSlider = new Swiper('.courses-slider .swiper', {
         loop: true,
         autoplay: {
@@ -197,11 +225,11 @@
             }
         },
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".courses-slider .swiper-button-next",
+            prevEl: ".courses-slider .swiper-button-prev",
         },
         pagination: {
-            el: ".swiper-pagination",
+            el: ".courses-slider .swiper-pagination",
             clickable: true,
         }
     });

@@ -91,6 +91,9 @@
                     </div>
                 </div>
             </div>
+            <?php 
+                get_template_part('templates/components/doingu_bacsi');
+            ?>
         </div>
     </div>
 <?php get_footer() ?>
