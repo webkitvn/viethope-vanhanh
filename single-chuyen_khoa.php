@@ -20,19 +20,19 @@
         </div>
         <?php get_template_part('templates/content', 'flexible') ?>
         <?php 
-            $terms = get_the_terms($post->ID, 'dm_dieu_tri');
+            $terms = get_the_terms($post->ID, 'dm_chuyen_khoa');
             $catIDs = [];
             foreach($terms as $term){
                 array_push($catIDs, $term->term_id);
             }
             $query = new WP_Query(array(
-                'post_type' => 'dieu_tri',
+                'post_type' => 'chuyen_khoa',
                 'posts_per_page' => 20,
                 'no_found_rows' => 1,
                 'post__not_in' => array($post->ID),
                 'tax_query' => array(
                     array(
-                        'taxonomy' => 'dm_dieu_tri',
+                        'taxonomy' => 'dm_chuyen_khoa',
                         'field' => 'id',
                         'terms' => $catIDs
                     )

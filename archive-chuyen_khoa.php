@@ -8,7 +8,7 @@
                     <div class="section-title">
                         <h1 class="entry-title">
                             <?php 
-                                if(is_tax('dm_dieu_tri')){
+                                if(is_tax('dm_chuyen_khoa')){
                                     single_cat_title();
                                 }
                                 else{
@@ -23,10 +23,10 @@
                 </div>
             </div>
             <?php 
-                if(is_tax('dm_dieu_tri')){
+                if(is_tax('dm_chuyen_khoa')){
                     $termID = get_queried_object()->term_id;
                     $terms = get_terms(array(
-                        'taxonomy' => 'dm_dieu_tri',
+                        'taxonomy' => 'dm_chuyen_khoa',
                         'hide_empty' => false,
                         'parent' => $termID,
                         'orderby' => 'menu_order'
@@ -34,7 +34,7 @@
                 }
                 else{
                     $terms = get_terms(array(
-                        'taxonomy' => 'dm_dieu_tri',
+                        'taxonomy' => 'dm_chuyen_khoa',
                         'hide_empty' => false,
                         'parent' => 0,
                         'orderby' => 'menu_order'
@@ -49,7 +49,7 @@
                             foreach($terms as $term) :
                         ?>
                         <div class="cure">
-                            <a href="<?php echo get_term_link($term->term_id, 'dm_dieu_tri') ?>" class="cure-thumb thumb thumb-11">
+                            <a href="<?php echo get_term_link($term->term_id, 'dm_chuyen_khoa') ?>" class="cure-thumb thumb thumb-11">
                                 <div class="img-holder">
                                     <?php 
                                         $img = get_field('dmdt_image', $term);
@@ -58,7 +58,7 @@
                                 </div>
                             </a>
                             <div class="info-box">
-                                <h3 class="cure-title"><a href="<?php echo get_term_link($term->term_id, 'dm_dieu_tri') ?>"><?php echo $term->name ?></a></h3>
+                                <h3 class="cure-title"><a href="<?php echo get_term_link($term->term_id, 'dm_chuyen_khoa') ?>"><?php echo $term->name ?></a></h3>
                                 <p><?php echo substr(strip_tags(term_description($term)), 0, 150) ?></p>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                 <div class="wrapper">
                     <div class="section-des">
                         <?php 
-                            if(is_tax('dm_dieu_tri')){
+                            if(is_tax('dm_chuyen_khoa')){
                                 echo term_description();
                             }
                             else{

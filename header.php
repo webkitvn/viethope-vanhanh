@@ -93,6 +93,7 @@
             <span></span>
         </button>
     </header>
+    <div id="header-spacer"></div>
     <div id="mobile-menu">
         <div class="search-form">
             <form action="/">

@@ -1,1 +1,1 @@
-<?php get_template_part('archive-dieu_tri') ?>
+<?php get_template_part('archive-chuyen_khoa') ?>

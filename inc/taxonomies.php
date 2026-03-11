@@ -2,37 +2,37 @@
     function vanhanh_register_my_taxes() {
 
         /**
-         * Taxonomy: Danh mục điều trị.
+         * Taxonomy: Danh mục chuyên khoa.
          */
-    
-        $labels = [
-            "name" => esc_html__( "Danh mục điều trị", "vanhanh" ),
-            "singular_name" => esc_html__( "Danh mục điều trị", "vanhanh" ),
-        ];
-    
         
-        $args = [
-            "label" => esc_html__( "Danh mục điều trị", "vanhanh" ),
-            "labels" => $labels,
-            "public" => true,
-            "publicly_queryable" => true,
-            "hierarchical" => true,
-            "show_ui" => true,
-            "show_in_menu" => true,
-            "show_in_nav_menus" => true,
-            "query_var" => true,
-            "rewrite" => [ 'slug' => 'dm_dieu_tri', 'with_front' => true,  'hierarchical' => true, ],
-            "show_admin_column" => true,
-            "show_in_rest" => true,
-            "show_tagcloud" => false,
-            "rest_base" => "dm_dieu_tri",
-            "rest_controller_class" => "WP_REST_Terms_Controller",
-            "rest_namespace" => "wp/v2",
-            "show_in_quick_edit" => true,
-            "sort" => false,
-            "show_in_graphql" => false,
-        ];
-        register_taxonomy( "dm_dieu_tri", [ "dieu_tri" ], $args );
+            $labels = [
+                "name" => esc_html__( "Danh mục chuyên khoa", "vanhanh" ),
+                "singular_name" => esc_html__( "Danh mục chuyên khoa", "vanhanh" ),
+            ];
+        
+            
+            $args = [
+                "label" => esc_html__( "Danh mục chuyên khoa", "vanhanh" ),
+                "labels" => $labels,
+                "public" => true,
+                "publicly_queryable" => true,
+                "hierarchical" => true,
+                "show_ui" => true,
+                "show_in_menu" => true,
+                "show_in_nav_menus" => true,
+                "query_var" => true,
+                "rewrite" => [ 'slug' => 'dm-chuyen-khoa', 'with_front' => true,  'hierarchical' => true, ],
+                "show_admin_column" => true,
+                "show_in_rest" => true,
+                "show_tagcloud" => false,
+                "rest_base" => "dm_chuyen_khoa",
+                "rest_controller_class" => "WP_REST_Terms_Controller",
+                "rest_namespace" => "wp/v2",
+                "show_in_quick_edit" => true,
+                "sort" => false,
+                "show_in_graphql" => false,
+            ];
+            register_taxonomy( "dm_chuyen_khoa", [ "chuyen_khoa" ], $args );
     
         /**
          * Taxonomy: Phòng ban.

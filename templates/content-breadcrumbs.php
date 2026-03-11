@@ -7,7 +7,7 @@
         $term = get_queried_object();
         $img = get_field('header_image', $term);
     }
-    elseif(is_post_type_archive('dieu_tri')){
+    elseif(is_post_type_archive('chuyen_khoa')){
         $img = get_field('dmdieutri_banner', 'option');
     }
     elseif(is_post_type_archive('goi_dieu_tri')){

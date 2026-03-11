@@ -23,7 +23,7 @@
                     <?php foreach($dmdieutri as $term) : ?>
                     <div class="swiper-slide">
                         <div class="cure">
-                            <a href="<?php echo get_term_link($term->term_id, 'dm_dieu_tri') ?>" class="cure-thumb thumb thumb-11">
+                            <a href="<?php echo get_term_link($term->term_id, 'dm_chuyen_khoa') ?>" class="cure-thumb thumb thumb-11">
                                 <div class="img-holder">
                                     <?php 
                                         $img = get_field('dmdt_image', $term);
@@ -31,7 +31,7 @@
                                     ?>
                                 </div>
                             </a>
-                            <h3 class="cure-title"><a href="<?php echo get_term_link($term->term_id, 'dm_dieu_tri') ?>"><?php echo $term->name ?></a></h3>
+                            <h3 class="cure-title"><a href="<?php echo get_term_link($term->term_id, 'dm_chuyen_khoa') ?>"><?php echo $term->name ?></a></h3>
                             <p><?php echo substr(strip_tags(term_description($term)), 0, 150) ?></p>
                         </div>
                     </div>

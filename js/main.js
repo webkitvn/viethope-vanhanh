@@ -1,7 +1,23 @@
 (function ($) {
     $(document).ready(function () {
-        const headerHeight = $("#main-header").outerHeight();
-        $("html").css("--header-height", headerHeight + "px");
+        var $header = $("#main-header");
+        var $html = $("html");
+
+        // Set header height once on load (full height including top-nav)
+        // Do NOT update on scroll/resize to prevent layout shift when top-nav hides
+        if ($header.length) {
+            $html.css("--header-height", Math.ceil($header.outerHeight()) + "px");
+        }
+
+        function updateAdminBarHeight() {
+            var h = Math.ceil($("#wpadminbar").outerHeight() || 0);
+            if (h) {
+                $html.css("--wp-admin-bar-height", h + "px");
+            }
+        }
+
+        updateAdminBarHeight();
+        $(window).on("resize orientationchange", updateAdminBarHeight);
     });
 
     $(".menu-toggle-btn").on("click", function (e) {
