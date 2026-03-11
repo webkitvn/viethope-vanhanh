@@ -30,8 +30,8 @@
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <?php while($query->have_posts()) : $query->the_post(); ?>
-                        <div class="swiper-slide">
-                            <?php get_template_part('templates/content', 'bs') ?>
+                        <div class="swiper-slide doctors" style="height: auto;">
+                            <?php get_template_part('templates/components/bacsi', 'card') ?>
                         </div>
                         <?php endwhile; wp_reset_postdata(); ?>
                     </div>
