@@ -44,3 +44,4 @@ openspec/
 .env.local
 
 /node_modules
+*.zip

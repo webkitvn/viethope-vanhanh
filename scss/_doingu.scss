@@ -77,6 +77,12 @@
                 padding: 30px 15px 15px;
             }
         }
+        .thumb {
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
     }
 }
 
@@ -97,7 +103,7 @@
 .single-doingubs {
     .entry-content {
         width: 100%;
-        //max-width: unset !important;
+        max-width: unset !important;
     }
 
     .doingu-info {
@@ -258,6 +264,9 @@
             display: flex;
             gap: 10px;
             margin-top: auto;
+            @include responsive(sm){
+                flex-direction: column;
+            }
             a {
                 display: flex;
                 gap: 5px;
@@ -292,6 +301,36 @@
                     width: 20px;
                     height: auto;
                 }
+            }
+        }
+    }
+    &.doctors-grid {
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        flex-wrap: wrap;
+        @include responsive(md){
+            gap: 20px;
+        }
+        @include responsive(sm){
+            gap: 10px;
+        }
+        .doctor{
+            width: calc(100% / 3 - 30px);
+            @include responsive(md){
+                width: calc(50% - 30px);
+            }
+            @include responsive(sm){
+                width: calc(50% - 10px);
+            }
+        }
+    }
+}
+.tax-dm_chuyen_khoa, .archive-chuyen_khoa, .single-chuyen_khoa {
+    .doctors {
+        .doctor{
+            .buttons{
+                display: none !important;
             }
         }
     }

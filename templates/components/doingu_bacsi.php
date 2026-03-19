@@ -26,21 +26,10 @@
             </div>
         </div>
         <div class="section-content">
-            <div class="doingubs doingubs-carousel swiper-slider">
-                <div class="swiper">
-                    <div class="swiper-wrapper">
-                        <?php while($query->have_posts()) : $query->the_post(); ?>
-                        <div class="swiper-slide doctors" style="height: auto;">
-                            <?php get_template_part('templates/components/bacsi', 'card') ?>
-                        </div>
-                        <?php endwhile; wp_reset_postdata(); ?>
-                    </div>
-                </div>
-                <div class="swiper-nav">
-                    <button class="swiper-button-next swiper-btn"></button>
-                    <button class="swiper-button-prev swiper-btn"></button>
-                </div>
-                <div class="swiper-pagination"></div>
+            <div class="doctors doctors-grid">
+                <?php while($query->have_posts()) : $query->the_post(); ?>
+                    <?php get_template_part('templates/components/bacsi', 'card') ?>
+                <?php endwhile; wp_reset_postdata(); ?>
             </div>
         </div>
     </div>

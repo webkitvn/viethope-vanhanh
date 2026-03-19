@@ -14,9 +14,6 @@
                 </div>
             </section>
             <section id="doctors_filter" class="filters">
-                <div class="chinhanh">
-                    <?php echo do_shortcode('[facetwp facet="chi_nhanh"]') ?>
-                </div>
                 <div class="dropdown-filters">
                     <div class="item">
                         <label for="">Chuyên khoa</label>
