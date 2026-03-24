@@ -120,24 +120,9 @@
     <div id="dialog-schedule" style="display:none;max-width:600px;">
         <div class="form-title"><?php _e("Đặt lịch khám", "vanhanh") ?></div>
         <div class="form-wrapper">
-            <div class="step location">
-                <h3 class="step-title"><?php _e("I. Chọn chi nhánh", "vanhanh") ?></h3>
-                <div class="tabs">
-                    <a class="active" href="#ho-chi-minh"><?php _e("Hồ Chí Minh", "vanhanh") ?></a>
-                    <a href="#can-tho"><?php _e("Cần Thơ", "vanhanh") ?></a>
-                    <a href="#long-xuyen"><?php _e("Long Xuyên", "vanhanh") ?></a>
-                </div>
-            </div>
             <div class="step forms">
-                <h3 class="step-title"><?php _e("II. Nhập thông tin", "vanhanh") ?></h3>
                 <div class="panel active" id="ho-chi-minh">
                     <?php echo do_shortcode('[contact-form-7 id="382" title="Đặt lịch khám - HCM"]') ?>
-                </div>
-                <div class="panel" id="can-tho">
-                    <?php echo do_shortcode('[contact-form-7 id="6434" title="Đặt lịch khám - Cần Thơ"]') ?>
-                </div>
-                <div class="panel" id="long-xuyen">
-                    <?php echo do_shortcode('[contact-form-7 id="945f2b4" title="Đặt lịch khám - Long Xuyên"]') ?>
                 </div>
             </div>
         </div>
