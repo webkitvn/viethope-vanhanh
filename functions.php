@@ -186,3 +186,9 @@ if ( ! function_exists( 'vh_get_term_excerpt' ) ) {
         return $excerpt;
     }
 }
+add_filter( 'acf/shortcode/allow_unsafe_html', function ( $allowed, $atts ) {
+    if ( $atts['field'] === 'map_iframe' ) {
+        return true;
+    }
+    return $allowed;
+}, 10, 2 );

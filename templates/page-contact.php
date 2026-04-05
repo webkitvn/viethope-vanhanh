@@ -14,9 +14,13 @@
                 </div>
             </div>
         </div>
+        <?php if(get_field('map_iframe')) : 
+            $map_iframe = get_field('map_iframe');
+            $map_iframe = str_replace('width="100%"', 'width="100%" height="450"', $map_iframe);
+        ?>
         <div class="map section" id="map">
             <div class="frame-holder">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7838.875952926987!2d106.66154904344133!3d10.777728757484379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f0040642b87%3A0xf7e5cef15fece72!2sTrung%20t%C3%A2m%20Y%20khoa%20Chuy%C3%AAn%20s%C3%A2u%20VIETHOPE!5e0!3m2!1sen!2s!4v1773384167316!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <?php echo $map_iframe ?>
             </div>
             <div class="wrapper">
                 <div class="contact-info">
@@ -24,6 +28,7 @@
                 </div>
             </div>
         </div>
+        <?php endif; ?>
         <div class="form-section section">
             <div class="wrapper">
                 <div class="form">
